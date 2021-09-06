@@ -1,0 +1,25 @@
+{
+  "Customer": {
+    "target": {
+      "object": "Customer",
+      "schema": "NEOKUNG"
+    }
+  },
+  "Employee": {
+    "target": {
+      "object": "Employee",
+      "schema": "NEOKUNG"
+    }
+  },
+  "Currency": {
+    "target": {
+      "object": "Currency",
+      "schema": "NEOKUNG"
+    }
+  },
+  "CVCUSTOMER": {
+    "target": {
+      "object": "MSSQL_Customer"
+    }
+  }
+}

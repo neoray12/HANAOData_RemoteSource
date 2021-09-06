@@ -1,0 +1,100 @@
+{
+  "definitions": {
+    "CatalogService": {
+      "@source": "srv/model_srv.cds",
+      "kind": "service"
+    },
+    "CatalogService.myCustomer": {
+      "kind": "entity",
+      "projection": {
+        "from": {
+          "ref": [
+            "CVCUSTOMER"
+          ]
+        }
+      },
+      "elements": {
+        "TITLE": {
+          "@title": "TITLE: Title",
+          "key": true,
+          "type": "cds.String",
+          "length": 8
+        },
+        "CUSTOMERALTERNATEKEY": {
+          "@title": "CUSTOMERALTERNATEKEY: CustomerAlternateKey",
+          "key": true,
+          "type": "cds.String",
+          "length": 15
+        },
+        "FIRSTNAME": {
+          "@title": "FIRSTNAME: FirstName",
+          "key": true,
+          "type": "cds.String",
+          "length": 50
+        },
+        "EMAIL": {
+          "@title": "EMAIL: EmailAddress",
+          "key": true,
+          "type": "cds.String",
+          "length": 50
+        },
+        "CUSTOMERKEY": {
+          "@title": "CUSTOMERKEY: CustomerKey",
+          "key": true,
+          "type": "cds.Integer"
+        },
+        "GEOGRAPHYKEY": {
+          "@title": "GEOGRAPHYKEY: GeographyKey",
+          "key": true,
+          "type": "cds.Integer"
+        }
+      }
+    },
+    "CVCUSTOMER": {
+      "kind": "entity",
+      "@cds.persistence.exists": true,
+      "@cds.persistence.calcview": true,
+      "elements": {
+        "TITLE": {
+          "@title": "TITLE: Title",
+          "key": true,
+          "type": "cds.String",
+          "length": 8
+        },
+        "CUSTOMERALTERNATEKEY": {
+          "@title": "CUSTOMERALTERNATEKEY: CustomerAlternateKey",
+          "key": true,
+          "type": "cds.String",
+          "length": 15
+        },
+        "FIRSTNAME": {
+          "@title": "FIRSTNAME: FirstName",
+          "key": true,
+          "type": "cds.String",
+          "length": 50
+        },
+        "EMAIL": {
+          "@title": "EMAIL: EmailAddress",
+          "key": true,
+          "type": "cds.String",
+          "length": 50
+        },
+        "CUSTOMERKEY": {
+          "@title": "CUSTOMERKEY: CustomerKey",
+          "key": true,
+          "type": "cds.Integer"
+        },
+        "GEOGRAPHYKEY": {
+          "@title": "GEOGRAPHYKEY: GeographyKey",
+          "key": true,
+          "type": "cds.Integer"
+        }
+      }
+    }
+  },
+  "meta": {
+    "creator": "CDS Compiler v2.5.2",
+    "flavor": "inferred"
+  },
+  "$version": "2.0"
+}

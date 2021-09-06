@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Calculation:scenario xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" id="MSSQL_Customer" applyPrivilegeType="NONE" dataCategory="CUBE" schemaVersion="3.0" outputViewType="Aggregation" cacheInvalidationPeriod="NONE" enforceSqlExecution="true">
+<descriptions defaultDescription="MSSQL_Customer"/>
+<localVariables/>
+<variableMappings/>
+<dataSources>
+  <DataSource id="Customer">
+    <resourceUri>Customer</resourceUri>
+  </DataSource>
+</dataSources>
+<calculationViews>
+  <calculationView xsi:type="Calculation:ProjectionView" id="Projection_1">
+    <viewAttributes>
+      <viewAttribute id="CustomerKey"/>
+      <viewAttribute id="GeographyKey"/>
+      <viewAttribute id="CustomerAlternateKey"/>
+      <viewAttribute id="Title"/>
+      <viewAttribute id="FirstName"/>
+      <viewAttribute id="MiddleName"/>
+      <viewAttribute id="LastName"/>
+      <viewAttribute id="NameStyle"/>
+      <viewAttribute id="BirthDate"/>
+      <viewAttribute id="MaritalStatus"/>
+      <viewAttribute id="Suffix"/>
+      <viewAttribute id="Gender"/>
+      <viewAttribute id="EmailAddress"/>
+      <viewAttribute id="YearlyIncome"/>
+      <viewAttribute id="TotalChildren"/>
+      <viewAttribute id="NumberChildrenAtHome"/>
+      <viewAttribute id="EnglishEducation"/>
+      <viewAttribute id="SpanishEducation"/>
+      <viewAttribute id="FrenchEducation"/>
+      <viewAttribute id="EnglishOccupation"/>
+      <viewAttribute id="SpanishOccupation"/>
+      <viewAttribute id="FrenchOccupation"/>
+      <viewAttribute id="HouseOwnerFlag"/>
+      <viewAttribute id="NumberCarsOwned"/>
+      <viewAttribute id="AddressLine1"/>
+      <viewAttribute id="AddressLine2"/>
+      <viewAttribute id="Phone"/>
+      <viewAttribute id="DateFirstPurchase"/>
+      <viewAttribute id="CommuteDistance"/>
+    </viewAttributes>
+    <calculatedViewAttributes/>
+    <input node="Customer"/>
+  </calculationView>
+</calculationViews>
+
+<logicalModel id="Projection_1">
+  <attributes>
+    <attribute id="TITLE" order="3" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Title"/>
+      <keyMapping columnObjectName="Projection_1" columnName="Title"/>
+    </attribute>
+    <attribute id="CUSTOMERALTERNATEKEY" order="4" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CustomerAlternateKey"/>
+      <keyMapping columnObjectName="Projection_1" columnName="CustomerAlternateKey"/>
+    </attribute>
+    <attribute id="FIRSTNAME" order="5" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="FirstName"/>
+      <keyMapping columnObjectName="Projection_1" columnName="FirstName"/>
+    </attribute>
+    <attribute id="EMAIL" order="6" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="EmailAddress"/>
+      <keyMapping columnObjectName="Projection_1" columnName="EmailAddress"/>
+    </attribute>
+  </attributes>
+  <calculatedAttributes/>
+  <baseMeasures>
+    <measure id="CUSTOMERKEY" order="1" aggregationType="sum" measureType="simple">
+      <descriptions defaultDescription="CustomerKey"/>
+      <measureMapping columnObjectName="Projection_1" columnName="CustomerKey"/>
+    </measure>
+    <measure id="GEOGRAPHYKEY" order="2" aggregationType="sum" measureType="simple">
+      <descriptions defaultDescription="GeographyKey"/>
+      <measureMapping columnObjectName="Projection_1" columnName="GeographyKey"/>
+    </measure>
+  </baseMeasures>
+  <calculatedMeasures/>
+  <restrictedMeasures/>
+  <localDimensions/>
+</logicalModel>
+<layout>
+  <shapes>
+    <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+      <upperLeftCorner x="40" y="85"/>
+    </shape>
+    
+  
+    <shape expanded="true" modelObjectName="Projection_1" modelObjectNameSpace="CalculationView">
+      <upperLeftCorner x="100" y="212"/>
+      <rectangleSize height="30" width="160"/>
+    </shape>
+  </shapes>
+</layout>
+</Calculation:scenario>

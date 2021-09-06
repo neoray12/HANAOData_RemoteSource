@@ -1,0 +1,14 @@
+{
+    "NEOKUNG-schema": {
+        "object_owner": {
+            "roles": [
+                "NEOKUNG::external_access_g"
+            ]
+        },
+        "application_user": {
+            "roles": [
+                "NEOKUNG::external_access"
+            ]
+        }
+    }
+}
